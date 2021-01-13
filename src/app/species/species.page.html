@@ -1,0 +1,42 @@
+<ion-app>
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons  slot="start">
+        <ion-button (click)="goBack()">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="background-image">
+      <ion-row>
+        <ion-col class="title">
+          <h3>Especies</h3>
+        </ion-col>
+      </ion-row>
+      <ion-card *ngFor="let specie of species">
+        <ion-card-header>
+          <ion-card-title>{{specie.name}}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <div class="card-films-content">
+            <strong>Classificação:</strong>
+            <p>{{specie.classification}}</p>
+          </div>
+          <div class="card-films-content">
+            <strong>Cor da Pele:</strong>
+            <p>{{specie.skin_colors}}</p>
+          </div>
+          <div class="card-films-content">
+            <strong>Cor do cabelo:</strong>
+            <p>{{specie.hair_colors}}</p>
+          </div>
+          <div class="card-films-content">
+            <strong>Cor dos olhos:</strong>
+            <p>{{specie.eye_colors}}</p>
+          </div>
+        </ion-card-content>
+      </ion-card>
+  </ion-content>
+</ion-app>

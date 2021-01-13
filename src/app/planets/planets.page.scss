@@ -1,0 +1,36 @@
+ion-toolbar,
+ion-content {
+  --background: transparent;
+  --color: #fff;
+}
+  
+.title {
+  text-align: center;
+  color: var(--ion-color-primary) !important;
+}
+
+
+ion-card {
+  background: var(--ion-color-secondary) !important;
+}
+
+ion-card-title {
+  color: #fff !important;
+}
+
+.btn-veja-mais {
+  margin-top: 16px;
+}
+
+.card-films-content {
+  display: flex;
+  align-items: center;
+}
+
+.card-films-content strong {
+  font-weight: 500;
+}
+
+.card-films-content p {
+  margin-left: 8px !important;
+}

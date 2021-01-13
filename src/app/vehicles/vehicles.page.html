@@ -1,0 +1,46 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons  slot="start">
+        <ion-button (click)="goBack()">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="background-image">
+      <ion-row>
+        <ion-col class="title">
+          <h3>Veiculos</h3>
+        </ion-col>
+      </ion-row>
+      <ion-card *ngFor="let vehicle of vehicles">
+        <ion-card-header>
+          <ion-card-title>{{vehicle.name}}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <div class="card-films-content">
+            <strong>Diametro:</strong>
+            <p>{{vehicle.diameter}}</p>
+          </div>
+          <div class="card-films-content">
+            <strong>Modelo:</strong>
+            <p>{{vehicle.model}}</p>
+          </div>
+          <div class="card-films-content">
+            <strong>Tamanho:</strong>
+            <p>{{vehicle.length}}</p>
+          </div>
+          <div class="card-films-content">
+            <strong>Velocidade:</strong>
+            <p>{{vehicle.max_atmosphering_speed}}</p>
+          </div>
+          <div class="card-films-content">
+            <strong>Passageiros:</strong>
+            <p>{{vehicle.passengers}} passageiros</p>
+          </div>
+        </ion-card-content>
+      </ion-card>
+  </ion-content>
+</ion-app>

@@ -1,0 +1,46 @@
+<ion-app>
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons  slot="start">
+        <ion-button (click)="goBack()">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content  class="background-image">
+      <ion-row>
+        <ion-col class="title">
+          <h3>Planetas</h3>
+        </ion-col>
+      </ion-row>
+      <ion-card *ngFor="let planet of planets">
+        <ion-card-header>
+          <ion-card-title>{{planet.name}}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <div class="card-films-content">
+            <strong>Diametro:</strong>
+            <p>{{planet.diameter}}</p>
+          </div>
+          <div class="card-films-content">
+            <strong>Clima:</strong>
+            <p>{{planet.climate}}</p>
+          </div>
+          <div class="card-films-content">
+            <strong>Gravidade:</strong>
+            <p>{{planet.gravity}}</p>
+          </div>
+          <div class="card-films-content">
+            <strong>Terreno:</strong>
+            <p>{{planet.terrain}}</p>
+          </div>
+          <div class="card-films-content">
+            <strong>População:</strong>
+            <p>{{planet.population}} Habitantes</p>
+          </div>
+        </ion-card-content>
+      </ion-card>
+  </ion-content>
+</ion-app>

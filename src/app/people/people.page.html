@@ -1,0 +1,46 @@
+<ion-app>
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons  slot="start">
+        <ion-button (click)="goBack()">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="background-image">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="title">
+            <h3>Personagens</h3>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+
+      <ion-card *ngFor="let people of peoples">
+        <ion-card-header>
+          <ion-card-title>{{people.name}}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <div class="card-films-content">
+            <strong>Genero:</strong>
+            <p>{{people.gender}}</p>
+          </div>
+          <div class="card-films-content">
+            <strong>Data de nascimento:</strong>
+            <p>{{people.birth_year}}</p>
+          </div>
+          <div class="card-films-content">
+            <strong>Cor do cabelo:</strong>
+            <p>{{people.hair_color}}</p>
+          </div>
+          <div class="card-films-content">
+            <strong>Peso:</strong>
+            <p>{{people.height}}</p>
+          </div>
+        </ion-card-content>
+      </ion-card>
+  </ion-content>
+</ion-app>

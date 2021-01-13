@@ -1,0 +1,43 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons  slot="end">
+        <ion-button (click)="logout()">
+          <ion-icon name="power-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="background-image">
+      <ion-row>
+        <ion-col class="title">
+          <h3>Filmes</h3>
+        </ion-col>
+      </ion-row>
+      <ion-card *ngFor="let film of films">
+        <ion-card-header>
+          <ion-card-title>Episódio {{film.episode_id}}: {{film.title}}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <div class="card-films-content">
+            <strong>Diretor:</strong>
+            <p>{{film.director}}</p>
+          </div>
+          <div class="card-films-content">
+            <strong>Ano:</strong>
+            <p>{{film.release_date}}</p>
+          </div>
+          <!-- <textarea>{{film.opening_crawl}}</textarea> -->
+          <ion-button 
+            class="btn-veja-mais" 
+            expand="full"
+            (click)="navigateToDescription(film.episode_id)"
+          >
+            Veja mais
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+  </ion-content>
+</ion-app>
